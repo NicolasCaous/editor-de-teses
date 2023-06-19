@@ -1,0 +1,29 @@
+.container {
+  display: flex;
+  max-width: 800px;
+  width: calc(100% - 64px);
+  padding: 0 32px;
+  margin: 24px auto;
+
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 25px;
+  text-align: justify;
+
+  .label {
+    text-align: end;
+    margin-right: 24px;
+    user-select: none;
+  }
+
+  .content {
+    text-indent: 24px;
+
+    &:focus-visible {
+      outline: none;
+    }
+
+    &::selection {
+      background: transparent;
+    }
+  }
+}
