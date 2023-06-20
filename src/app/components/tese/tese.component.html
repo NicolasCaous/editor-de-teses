@@ -1,8 +1,13 @@
 <ng-container *ngIf="vm$ | async as vm">
-  {{ vm.latestValuesFromDragService | json }}
   <div class="container">
     <div class="label">{{ vm.index }}.</div>
-    <div [id]="'edt-content-' + vm.index" class="content" (mousedown)="mouseDragService.startDrag($event)">
+    <div
+      class="content"
+      [attr.contenteditable]="vm.editable"
+      (dblclick)="onDoubleClick()"
+      (focusout)="onFocusOut()"
+      #contentRef
+    >
       {{ vm.text }}
     </div>
   </div>

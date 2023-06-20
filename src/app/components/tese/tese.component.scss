@@ -5,7 +5,7 @@
   padding: 0 32px;
   margin: 24px auto;
 
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'Helvetica', serif;
   font-size: 25px;
   text-align: justify;
 
@@ -17,13 +17,15 @@
 
   .content {
     text-indent: 24px;
+    width: 100%;
+    transition: background-color 100ms linear;
 
     &:focus-visible {
       outline: none;
     }
 
-    &::selection {
-      background: transparent;
+    &[contenteditable="true"] {
+      background-color: yellow;
     }
   }
 }

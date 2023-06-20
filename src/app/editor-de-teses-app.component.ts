@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { TeseComponent } from './components/tese/tese.component';
-import { MouseDragService } from './services/mouse-drag.service';
+import { GlobalEventService } from './services/global-event.service';
 
 @Component({
   selector: 'edt-app',
@@ -10,5 +10,5 @@ import { MouseDragService } from './services/mouse-drag.service';
   styleUrls: ['./editor-de-teses-app.component.scss'],
 })
 export class EditorDeTesesAppComponent {
-  constructor(public mouseDragService: MouseDragService) {}
+  constructor(public globalEventService: GlobalEventService) {}
 }

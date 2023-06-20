@@ -1,4 +1,4 @@
-<ng-container (window:mouseup)="mouseDragService.endDrag($event)" (window:mousemove)="mouseDragService.updateDrag($event)">
+<ng-container (window:mousedown)="globalEventService.onMouseDown($event)">
   <edt-tese index="1"></edt-tese>
   <edt-tese index="2"></edt-tese>
   <edt-tese index="3"></edt-tese>
